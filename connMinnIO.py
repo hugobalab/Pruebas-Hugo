@@ -12,6 +12,10 @@ for bucket in client.list_buckets():
     print(bucket.creation_date)
 
 
+# Descargar
+client.fget_object("pruebahugo", "Apuntes-Fases_Eventos_Regiones.pdf", "downloadedData/downloaded.pdf")
+print("Descargado!")
+
 # Subir
 client.fput_object("pruebahugo", "agua.pdf", "downloadedData/agua.pdf")
 print("Subido!")
